@@ -1,0 +1,8 @@
+{
+  // Place your settings in this file to overwrite default and user settings.
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false,
+  "files.eol": "\n",
+  "editor.formatOnSave": true,
+  "editor.rulers": [120]
+}
