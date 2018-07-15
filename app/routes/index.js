@@ -18,10 +18,12 @@ import Repository from './Repository';
 
 export default store => {
   const history = createBrowserHistory();
+
   const clickMenu = () => {
     const menuState = store.getState('menu').menu;
     store.dispatch(menuAction(!menuState));
   };
+
   const routes = (
     <Router history={history}>
       <div>

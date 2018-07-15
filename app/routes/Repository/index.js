@@ -43,9 +43,6 @@ class Repository extends React.Component<Props, void> {
   }
 
   componentDidMount() {
-    const id = 15062869;
-    // NOTE: There is not need call repository API by Id, because props.repoInfo have all repositories from homepage
-
     if (_.isEmpty(this.state.repository) === false) {
       this.props.fetchRepositoryBranchesAction(`${this.state.repository.url}/branches`);
       this.props.fetchRepositoryContributorsAction(`${this.state.repository.url}/stats/contributors`);
@@ -97,6 +94,7 @@ class Repository extends React.Component<Props, void> {
             </span>
           </div>
         </div>
+
         <div className="meta-content">
           <span className="description">{repository.description}</span>
           <span>
