@@ -31,7 +31,6 @@ class Home extends React.Component<Props, void> {
   }
 
   componentWillReceiveProps(newProps: Props) {
-    console.log('new props message:', newProps.messages);
     if (this.props.repoInfo !== newProps.repoInfo && _.isEmpty(newProps.repoInfo) === false) {
       const repositoryCount = newProps.repoInfo.total_count;
       this.setState({ repositoryCount, repos: newProps.repoInfo.items });
@@ -98,7 +97,7 @@ class Home extends React.Component<Props, void> {
               </div>
             ))}
         </ul>
-        <Pagination total={100} current={this.state.activePage} display={10} onChange={this.handlePageChange} />
+        <Pagination total={30} current={this.state.activePage} display={10} onChange={this.handlePageChange} />
       </div>
     );
   }
