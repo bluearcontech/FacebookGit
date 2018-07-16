@@ -98,12 +98,7 @@ class Home extends React.Component<Props, void> {
               </div>
             ))}
         </ul>
-        <Pagination
-          total={repositoryCount}
-          current={this.state.activePage}
-          display={10}
-          onChange={this.handlePageChange}
-        />
+        <Pagination total={100} current={this.state.activePage} display={10} onChange={this.handlePageChange} />
       </div>
     );
   }
